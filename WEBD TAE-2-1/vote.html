@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>JD E-Voter's Platform</title>
+</head>
+<body class="bg-secondary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="/index.html">JD E-Voting</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="/vote.html">Vote</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn-success">Login</button>
+            <button type="button" class="btn btn-danger mx-2">Sign Up</button>
+            
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+   
+
+        
+
+    <!-- Election Name -->
+    <div class="accordion accordion-flush" id="accordionFlushExample" >
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: teal">
+              <strong>Society Secretary's Election</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Gokuldham Society's Election - Last Secretary <strong>"Mr. Atmaram Tukaram Bhide"</strong></div>
+          </div>
+        </div>
+    </div>
+
+     <!-- Voted Successfully -->
+<p>
+  <div class="text-light bg-success" id="vote">
+  </div>
+</p>
+     
+
+    <!-- Society's Image's -->
+
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Gokuldham2.webp" class="d-block w-100" alt="..." style="height: 51vh;">
+          </div>
+        </div>
+      </div> -->
+
+    <!-- Election Candidates -->
+
+    <div class="container d-flex flex- my-5 justify-content-evenly">
+        <div class="card mx-2" style="width: 18rem;">
+            <img src="popatlal3.webp" class="card-img-top h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Patrakar Popatlal</h5>
+              <p class="card-text">Duniya Hila Dunga!</p>
+              <!-- <a href="#" class="btn btn-primary">Vote Me</a> -->
+             
+              <button type="button" id="popatlal" onclick="votePopatlal()" class="btn btn-primary">Vote Me</button>
+            </div>
+          </div>
+        
+          <div class="card mx-2" style="width: 18rem;">
+            <img src="Atmaram_Tukaram_Bhide.webp" class="card-img-top h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Aatmaram Tukaram Bhide</h5>
+              <p class="card-text">Me Aatmaram Tukaram Bhide Is Gukuldham Society Ka Ek Mev Secretary!</p>
+              <!-- <a href="#" class="btn btn-primary">Vote Me</a> -->
+              <button type="button" id="bhide" onclick="voteBhide()" class="btn btn-primary">Vote Me</button>
+            </div>
+          </div>
+
+          <div class="card mx-2" style="width: 18rem;">
+            <img src="Jethalal_profile.webp" class="card-img-top h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jethalal Champaklal Gada</h5>
+              <p class="card-text">Gada Electronic's Ka Malik - Kachi Madu!</p>
+              <!-- <a href="#" class="btn btn-primary">Vote Me</a> -->
+              <button type="button" id="jetha" onclick="voteJetha()" class="btn btn-primary">Vote Me</button>            
+        </div>
+          </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center mt-5" style="height: 12vh;">
+      <p>E-Voter's Platform - &copy; JD E-Voter's Platform </p>
+      <img class="mx-2" src="facebook.png" alt="" height="40px">
+      <img class="mx-2" src="instagram.jpg" alt="" height="40px">
+      <img class="mx-2" src="twitter2.png" alt="" height="40px">
+  </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+      <script>
+        var popatlal = document.getElementById('popatlal');
+        var bhide = document.getElementById('bhide');
+        var jetha = document.getElementById('jetha');
+
+        var vote = document.getElementById('vote');
+
+        function votePopatlal(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Patrakar Popatlal </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>` 
+            popatlal.innerHTML = `Voted!`
+        }
+        function voteBhide(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Aatmaram Tukaram Bhide </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+            bhide.innerHTML = `Voted!`
+        }
+        function voteJetha(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Jethalal Champaklal Gada </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+            jetha.innerHTML = `Voted!`
+        }
+      </script>
+</body>
+</html>

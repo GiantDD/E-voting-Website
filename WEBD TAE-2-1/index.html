@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>JD E-Voter's Platform</title>
+</head>
+<body class="bg-secondary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="/index.html">JD E-Voting</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="/vote.html">Vote</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn-success">Login</button>
+            <button type="button" class="btn btn-danger mx-2">Sign Up</button>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Voted Successfully -->
+
+    <div class="text-light bg-success" id="vote">
+    </div>
+
+<p>
+    <!-- Candidates Poster -->
+
+      <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="3.png" class="d-block w-100" alt="..." style="height: 70vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="2.png" class="d-block w-100" alt="..." style="height: 70vh;">
+          </div>
+          <div class="carousel-item">
+            <img src="1.png" class="d-block w-100" alt="..." style="height: 70vh;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </p>
+
+
+
+    <!-- Description -->
+
+    <div class="accordion container" id="accordionExample">
+      <div class="accordion-item bg-dark text-light">
+        <h2 class="accordion-header" id="headingOne">
+          <!-- <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button> -->
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong>Today we are helding Gokuldham Society's Secretary Election</strong></p>
+            <p>There's been very excitement among the people about who will be the next Secretary after Mr. Aatmaram Tukaram Bhide<code>.Gokuldham Co-operative Society</code>, is a very famous Society in the Television World.</p> 
+            <p>The Producer Asit Kumarr Modi has contacted us to host a Secretary Election for them to telecast in there upcoming episode!</p>
+            <p>Best of Luck to all Candidates</p>
+            <p><strong>We are hoping the best one will win!</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Society's Image's -->
+
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Gokuldham2.webp" class="d-block w-100" alt="..." style="height: 51vh;">
+          </div>
+        </div>
+      </div> -->
+
+    <footer class="bg-dark text-light text-center mt-5" style="height: 12vh;">
+        <p>E-Voter's Platform - &copy; JD E-Voter's Platform </p>
+        <img class="mx-2" src="facebook.png" alt="" height="40px">
+        <img class="mx-2" src="instagram.jpg" alt="" height="40px">
+        <img class="mx-2" src="twitter2.png" alt="" height="40px">
+    </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+      <script>
+        var popatlal = document.getElementById('popatlal');
+        var vote = document.getElementById('vote');
+        function votePopatlal(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Patrakar Popatlal </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+        }
+
+        function voteBhide(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Aatmaram Tukaram Bhide </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+        }
+
+        function voteJetha(){
+            vote.innerHTML = `<div class="alert success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Voted for <strong> Jethalal Champaklal Gada </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+        }
+
+      </script>
+</body>
+</html>
